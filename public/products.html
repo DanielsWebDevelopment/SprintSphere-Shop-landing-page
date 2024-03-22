@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===================== Bootstrap CDN =============  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- ===================== Font Awesome CDN =================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ========================= Google Fonts ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- ========================= CSS StyleSheet ================= -->
+    <link rel="stylesheet" href="/dist/style.css">
+    <title>SprintSphere</title>
+</head>
+<body>
+    <!-- ============== Navigaton =========== -->
+    <nav class="navbar" id="navbar">
+        <a href="./index.html" class="logo">SprintSphere</a>
+
+        <ul class="nav">
+            <li class="nav__item">
+                <a href="./index.html">Home</a>
+            </li>
+            <li class="nav__item">
+                <a href="./products.html">Products</a>
+            </li>
+            <li class="nav__item">
+                <a href="#">New Arrivals</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" id="open-cart-btn"> 
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </li>
+            <div class="navbar__toggle" id="navbar-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="shopping-cart" id="shopping-cart">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                </div>
+                <button class="cart" id="close-cart-btn">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+
+                <div class="cart-content">
+                    <div class="empty-cart-message">Your cart is empty ...</div>
+                </div>
+
+                <div class="amount-calc">
+                    <div class="sub-total">
+                        <div class="sub-total_count">
+                            <small>Sub total</small>
+                        </div>
+                        <div class="sub__total_amount">
+                            <span>$0.00</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div class="total_count">
+                            <small>Total</small>
+                        </div>
+                        <div class="total_amount">
+                            <span>$0.00</span>
+                        </div>
+                    </div>
+                    <div class="checkout__btn">
+                        <button>Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+<!-- =================== Sidebar Section ========= -->
+    <div class="sidebar_nav" id="sidebar_nav">
+        <h4>SprintSphere</h4>
+        
+        <li class="nav__item">
+            <a href="./index.html">Home</a>
+        </li>
+        <li class="nav__item">
+            <a href="./products.html">Products</a>
+        </li>
+        <li class="nav__item">
+            <a href="./products.html">New Arrivals</a>
+        </li>
+        <li class="nav__item">
+            <a href="#" id="open-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </li>
+    </div>
+<!-- =================== Hero Section ========= -->
+    <header class="top__products-wrapper">
+        <div class="left-header-product">
+            <div class="top__product-info">
+                <h1>New Arrivals</h1>
+                <span>Sneakers, Watches, Fitness Equipment, bundles</span>
+            </div>
+            <div class="top_product-sub-info">
+                <p>Discover a new world of fitness</p>
+            </div>
+        </div>
+        <div class="header-product-image">
+            <img src="assets/air-max-plus-3-shoes-NbNLfP.png" />
+        </div>
+    </header>
+    <!-- =================== Products Section ========= -->
+    <section class="products">
+        <div class="products_title">
+            <div class="product_header">
+                <h2>Fitness Products</h2>
+            </div>
+            <div class="product-name">
+                <h3>Fitness</h3>
+            </div>
+        </div>
+        <div class="product-divider"></div>
+        <div class="products__container" id="page1">
+            <div class="products_items" id="product_items"></div>
+
+            <div class="next-page_cta" id="next-page_cta">
+                <button href="#" id="next">Next Page</button>  
+            </div>
+        </div>
+        <div class="next__page-products" id="page2">
+            <div class="next-products_items" id="next-product_items"></div>
+
+            <div class="next-page_cta" id="next-page_cta">
+                <button href="#" id="prev">Prev Page</button>  
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Footer Section ========= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="col">
+                <h5>Company</h5>
+                <ul class="footer-links">
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#">Products</a></li>
+                    <li class="item"><a href="#">New Arrivals</a></li>
+                    <li class="item"><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h5>Shipping</h5>
+                <ul class="footer-links">
+                    <li class="item"><a href="#">Shipping Policy</a></li>
+                    <li class="item"><a href="#">Shipping Info</a></li>
+                    <li class="item"><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h5>Privacy Policy</h5>
+                <ul class="footer-links">
+                    <li class="item"><a href="#">Terms & Conditions</a></li>
+                    <li class="item"><a href="#">How we store Data</a></li>
+                    <li class="item"><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <div class="col">
+                    <h5 class="socials-title">Social Media</h5>
+                    <div class="s-icons">
+                        <div class="social-icons">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#">
+                                <i class="fa-brands fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>Copyright &copy; 2024, SprintSphere. All right reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
