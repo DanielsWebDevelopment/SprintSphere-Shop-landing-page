@@ -194,48 +194,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function newProducts(){
-    const newProductContainer = document.querySelector('.next__page-products');
-
-    nextPageProducts.forEach(newProduct => {
-        const newCards = document.createElement('div');
-        newCards.classList.add('next-page-content-cards');
-
-        newCards.innerHTML = `
-        <div class="n-product-card">
-            <div class="tp-product-card">
-                <div class="tp-products-icons">
-                    <div class="s-icon">
-                        <span><i class="fa-regular fa-star"></i></span>
-                    </div>
-                    <div class="h-icon">
-                        <span><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                </div>
-                <div class="tp-product-image">
-                    <img src="./assets/${newProduct.image}" alt="${newProduct.title}">
-                </div>
-                <div class="tp-product-desc">
-                    <div class="product_title">${newProduct.title}</div>
-                    <p class="p-desc">Elevate your runs with the perfect blend of 
-                    comfort and responsiveness.</p>
-                </div>
-                <div class="tp-product-info">
-                    <div class="product_info">$${newProduct.price.toFixed(2)}</div>
-                </div>
-            </div>
-            <div class="bt-product-card">
-                <div class="bt-arrival-stats">
-                    <small>New Arrival</small>
-                </div>
-                <div class="add_to-cart-btn" data-id="${newProduct.id}">
-                    <button>Add</button>
-                </div>
-            </div>
-        </div>
-        `;
-        newProductContainer.appendChild(newCards);
-    });
+    const newProductContainer = document.getElementById('product_items');
 };
+
+
 
 // ============= product Rendering function / implemention
 function renderproducts(){
