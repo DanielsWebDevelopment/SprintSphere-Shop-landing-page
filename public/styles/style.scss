@@ -1078,8 +1078,6 @@ html {
 
   .container {
     .header__content {
-      position: relative;
-      bottom: 65px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1087,7 +1085,7 @@ html {
     }
     .header__title h1 {
       text-align: center;
-      font-size: 2.6rem;
+      font-size: 2.7rem;
       font-weight: 700;
     }
     .header__title p {
@@ -1122,20 +1120,39 @@ html {
   }
   
   .content-image {
-   display: none;
+    width: 100%;
+    position: relative;
+    bottom: 750px;
+    left: 100px;
+  }
+  
+  .content-image::before {
+    content: "";
+    position: absolute;
+    height: 420px;
+    width: 420px;
+    bottom: 150%;
+    background: var(--color-primary);
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .content-image img {
+    display: none;
   }
 
   .scroll-caption {
     position: absolute;
-    top: 89%;
+    top: 90%;
     .scroll-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid #c7c7c7;
-      width: 130%;
+      width: 110%;
       .scroll__header small {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         color: var(--secondary-sub-heading);
       }
       .mouse-scroller {
@@ -1376,7 +1393,7 @@ html {
 
   .footer {
     position: absolute;
-    top: 1200%;
+    top: 950%;
     left: 0;
     width: 100%;
     margin-top: 520px;
@@ -1496,14 +1513,14 @@ html {
         width: 360px;
         position: relative;
         left: 2px;
-        bottom: 10px;
+        bottom: 80px;
       }
   }
 
   .products {
     position: relative;
     right: 10px;
-    margin-top: 130px;
+    margin-top: 162px;
     .products_title {
       display: flex;
       flex-direction: column;
@@ -1541,12 +1558,11 @@ html {
       grid-template-columns: repeat(1, 1fr);
       place-items: center;
       gap: 30px;
-      width: 50%;
+      width: 100%;
       padding: 70px;
     }
     .product_card {
       background-color: #fcfcfc;
-      padding: 20px 20px;
       border-radius: 8px;
       box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s ease-in-out;
@@ -1576,9 +1592,8 @@ html {
         }
       }
       .product_image img {
-        height: 30%;
-         width: 30%;
-         object-fit: cover;
+        height: 330px;
+        width: 330px;
       }
       .bottom-product-card {
         margin-top: 15px;
